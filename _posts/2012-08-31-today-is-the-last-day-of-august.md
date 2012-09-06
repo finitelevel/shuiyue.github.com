@@ -4,6 +4,7 @@ title: "Today is the last day of August"
 description: ""
 category: diary
 tags: [diary]
+comments: true
 ---
 {% include JB/setup %}
 

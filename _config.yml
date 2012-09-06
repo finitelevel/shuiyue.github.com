@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 水月痴人
-tagline: 非淡泊无以明志 非宁静无以致远
+tagline: 非淡泊无以明志<br/>非宁静无以致远
 author :
   name : 刘磊
   email : lo2007@126.com
@@ -79,11 +79,11 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : shuiyue
     livefyre :
-      site_id : 123
+      site_id : shuiyue
     intensedebate :
-      account : 123abc
+      account : lo2007@126.com
     facebook :
       appid : 123
       num_posts: 5
