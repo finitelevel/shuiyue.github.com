@@ -4,16 +4,15 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <meta name="description" content="个人博客" />
-<meta name="keywords" content="Java,个人博客,技术,水月痴人,搜索,技术博客,程序猿,程序员,搜索开发工程师,搜索研发工程师" />
+<meta name="keywords" content="Java,WEB项目,根路径,搜索,技术博客,程序猿,程序员" />
 <title>水月痴人博客</title>
 
 <!-- Fav icon -->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-</script>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
 
 <!--[if lte IE 8]>
 	<style type="text/css">.blog_page img{width:582px;}</style>
@@ -27,7 +26,7 @@
 	
 	<div class="top_section">
 		<!-- Logo -->
-		<div class="logo"><a href="#">水月BLOG</a></div>
+		<div class="logo"><a href="../index.html">水月BLOG</a></div>
 	</div>
 	<!-- Top section Ends -->
 	
@@ -54,23 +53,15 @@
 						<h1><a href="#">JAVA WEB项目如何获得项目根路径？</a></h1>
 						<h5>Posted at 12/30/2010</h5>
 					</div>
-					<a href="#"><img src="images/test.jpg" class="border_magic float_left" alt="" /></a>	
+					<a href="#"><img src="../images/test.jpg" class="border_magic float_left" alt="" /></a>	
 					<p>前段时间做JSP项目，需要引用项目的根路径，即是request.getContextPath()获取到的路径。但是由于系统是用struts2开发，在JSP页面中不想出现Java代码（至于理由大家都知道，我就不赘述了），于是想用EL表达式来获取，思考了一会儿没好的思路，无非是换汤不换药的做法，于是Google。</p>
-					<a href="post/2012123001.html" class="button">Read more..</a>
+					<p>检索出一个比较好的解决方案是在Action里通过ActionContext.getRequest.setAttributes("root","/xxx（项目根路径）")，然后在JSP页面中通过${request.root}来获取，这种方法主要有两方面的不足：第一是需要在每个需要获取根路径的action里设置比较麻烦，第二是对于不执行action的页面来讲这种方法不太实用（当然有解决方案，但是只会将这种方法推向更麻烦的境地）。</p>
+					<p>后来发现通过相对路径设置更简单，例如访问根路径下的image文件目录，而此时在根目录下的product文件目录下，只需用：../image即可访问到，比上一个方法简单了不少，这种方法通过避开获取根路径来达到目的，以此来降低复杂度。缺点是需要知道目录的层次，加上一些struts命名空间的影响，导致用这种方法经常出现找不到路径的感觉。</P>
+					<P>在读struts2文档的时候发现一种新的方法，直接在页面中通过${pageContext.request.contextPath}获取根路径，是为比以上两种更好的方法，起码消除了以上两种方法的不足之处，特此记录。</p>
 				</div>
 				<!-- Post Ends -->
 				
-				<!-- Post starts -->
-				<div class="post_wrapper">
-					<div class="post_data">	
-						<h1><a href="#">Struts2中global-exception-mappings的配置</a></h1>
-						<h5>Posted at 07/12/2010</h5>
-					</div>			
-					<a href="#"><img src="images/test2.jpg" class="border_magic float_left" alt="" /></a>		
-					<p>在看struts-2.2.1的文档时，按照例子的步骤一步步地做下去，但是在做到Exception Handling这一节时（http://struts.apache.org/2.2.1/docs/exception-handling.html）要在struts.xml中配置以下信息：</p>
-					<a href="post/2012071201.html" class="button">Read more..</a>
-				</div>
-				<!-- Post Ends -->
+				
 				
 			</div>
 			<!-- Left column Ends -->
@@ -80,8 +71,8 @@
 				
 				<h1>近期文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
+					<li><a href="2012071201.html">Struts2中global-exception-mappings的配置</a></li>
 					<li><a href="#">Java集合应用中的一个小问题</a></li>
 					<li><a href="#">Jetty中文乱码问题的解决</a></li>
 					<li><a href="#">JS中URLEncode格式化字符串</a></li>
@@ -94,8 +85,8 @@
 				
 				<h1>热门文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="#">Java集合应用中的一个小问题</a></li>
+					<li><a href="#">JAVA WEB项目如何获得项目根路径？</a></li>
 
 				</ul>
 				

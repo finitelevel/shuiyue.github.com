@@ -11,9 +11,8 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-</script>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
 
 <!--[if lte IE 8]>
 	<style type="text/css">.blog_page img{width:582px;}</style>
@@ -54,23 +53,13 @@
 						<h1><a href="#">JAVA WEB项目如何获得项目根路径？</a></h1>
 						<h5>Posted at 12/30/2010</h5>
 					</div>
-					<a href="#"><img src="images/test.jpg" class="border_magic float_left" alt="" /></a>	
+					<a href="#"><img src="../images/test.jpg" class="border_magic float_left" alt="" /></a>	
 					<p>前段时间做JSP项目，需要引用项目的根路径，即是request.getContextPath()获取到的路径。但是由于系统是用struts2开发，在JSP页面中不想出现Java代码（至于理由大家都知道，我就不赘述了），于是想用EL表达式来获取，思考了一会儿没好的思路，无非是换汤不换药的做法，于是Google。</p>
-					<a href="post/2012123001.html" class="button">Read more..</a>
+					<a href="#" class="button">Read more..</a>
 				</div>
 				<!-- Post Ends -->
 				
-				<!-- Post starts -->
-				<div class="post_wrapper">
-					<div class="post_data">	
-						<h1><a href="#">Struts2中global-exception-mappings的配置</a></h1>
-						<h5>Posted at 07/12/2010</h5>
-					</div>			
-					<a href="#"><img src="images/test2.jpg" class="border_magic float_left" alt="" /></a>		
-					<p>在看struts-2.2.1的文档时，按照例子的步骤一步步地做下去，但是在做到Exception Handling这一节时（http://struts.apache.org/2.2.1/docs/exception-handling.html）要在struts.xml中配置以下信息：</p>
-					<a href="post/2012071201.html" class="button">Read more..</a>
-				</div>
-				<!-- Post Ends -->
+				
 				
 			</div>
 			<!-- Left column Ends -->
@@ -80,8 +69,8 @@
 				
 				<h1>近期文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="#">JAVA WEB项目如何获得项目根路径？</a></li>
+					<li><a href="#">Struts2中global-exception-mappings的配置</a></li>
 					<li><a href="#">Java集合应用中的一个小问题</a></li>
 					<li><a href="#">Jetty中文乱码问题的解决</a></li>
 					<li><a href="#">JS中URLEncode格式化字符串</a></li>
@@ -94,8 +83,8 @@
 				
 				<h1>热门文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="#">Java集合应用中的一个小问题</a></li>
+					<li><a href="#">JAVA WEB项目如何获得项目根路径？</a></li>
 
 				</ul>
 				

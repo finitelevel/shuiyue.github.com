@@ -4,16 +4,15 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <meta name="description" content="个人博客" />
-<meta name="keywords" content="Java,个人博客,技术,水月痴人,搜索,技术博客,程序猿,程序员,搜索开发工程师,搜索研发工程师" />
+<meta name="keywords" content="Java,WEB项目,根路径,搜索,技术博客,程序猿,程序员" />
 <title>水月痴人博客</title>
 
 <!-- Fav icon -->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" type="text/css" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-</script>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
 
 <!--[if lte IE 8]>
 	<style type="text/css">.blog_page img{width:582px;}</style>
@@ -27,7 +26,7 @@
 	
 	<div class="top_section">
 		<!-- Logo -->
-		<div class="logo"><a href="#">水月BLOG</a></div>
+		<div class="logo"><a href="../index.html">水月BLOG</a></div>
 	</div>
 	<!-- Top section Ends -->
 	
@@ -51,26 +50,19 @@
 				<!-- Post starts -->
 				<div class="post_wrapper">
 					<div class="post_data">	
-						<h1><a href="#">JAVA WEB项目如何获得项目根路径？</a></h1>
-						<h5>Posted at 12/30/2010</h5>
+						<h1><a href="#">Struts2中global-exception-mappings的配置</a></h1>
+						<h5>Posted at 07/12/2010</h5>
 					</div>
-					<a href="#"><img src="images/test.jpg" class="border_magic float_left" alt="" /></a>	
-					<p>前段时间做JSP项目，需要引用项目的根路径，即是request.getContextPath()获取到的路径。但是由于系统是用struts2开发，在JSP页面中不想出现Java代码（至于理由大家都知道，我就不赘述了），于是想用EL表达式来获取，思考了一会儿没好的思路，无非是换汤不换药的做法，于是Google。</p>
-					<a href="post/2012123001.html" class="button">Read more..</a>
+					<a href="#"><img src="../images/test2.jpg" class="border_magic float_left" alt="" /></a>	
+					<p>在看struts-2.2.1的文档时，按照例子的步骤一步步地做下去，但是在做到Exception Handling这一节时（http://struts.apache.org/2.2.1/docs/exception-handling.html）要在struts.xml中配置以下信息：</p>
+					<p><img src="../images/struts-mapping.jpg" class="border_magic float_left" alt="" /></p>
+					<p>但是当我把这段内容Ctrl+C再Ctrl+Z到Eclipse时package标签却报了错，错误如下：The content of element type "package" must match "(result-types?,interceptors?,default-interceptor-ref?,default-action-ref?,default-class-ref?,global-results?,global-exception-mappings?,action*)"。大概就是说package下只能放特定的几个标签，但是明明有global-exception-mappings，一时有些困惑……</P>
+					<P>于是Google搜索，在Struts以往的版本中也发现一个类似的例子，有些不一样的是global-results标签在global-exception-mappings的前面，于是就在本地试验了一下，把global-results标签与global-exception-mappings调换了一下顺序，错误消失了……</p>
+					<p>至于这个问题的原因，我思考了一下还是想不出个所以然，觉得完全没必要这样，global-exception-mappings在前面反而能更清晰地表达意思，或者就不要管顺序嘛，而struts为什么非要报这个错误呢？</p>
 				</div>
 				<!-- Post Ends -->
 				
-				<!-- Post starts -->
-				<div class="post_wrapper">
-					<div class="post_data">	
-						<h1><a href="#">Struts2中global-exception-mappings的配置</a></h1>
-						<h5>Posted at 07/12/2010</h5>
-					</div>			
-					<a href="#"><img src="images/test2.jpg" class="border_magic float_left" alt="" /></a>		
-					<p>在看struts-2.2.1的文档时，按照例子的步骤一步步地做下去，但是在做到Exception Handling这一节时（http://struts.apache.org/2.2.1/docs/exception-handling.html）要在struts.xml中配置以下信息：</p>
-					<a href="post/2012071201.html" class="button">Read more..</a>
-				</div>
-				<!-- Post Ends -->
+				
 				
 			</div>
 			<!-- Left column Ends -->
@@ -80,8 +72,8 @@
 				
 				<h1>近期文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
+					<li><a href="2012071201.html">Struts2中global-exception-mappings的配置</a></li>
 					<li><a href="#">Java集合应用中的一个小问题</a></li>
 					<li><a href="#">Jetty中文乱码问题的解决</a></li>
 					<li><a href="#">JS中URLEncode格式化字符串</a></li>
@@ -94,8 +86,8 @@
 				
 				<h1>热门文章</h1>
 				<ul>
-					<li><a href="post/2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
-					<li><a href="post/2012071201.html">Struts2中global-exception-mappings的配置</a></li>
+					<li><a href="2012123001.html">JAVA WEB项目如何获得项目根路径？</a></li>
+					<li><a href="2012071201.html">Struts2中global-exception-mappings的配置</a></li>
 
 				</ul>
 				
